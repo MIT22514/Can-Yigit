@@ -17,6 +17,7 @@ h1 {
     letter-spacing: -0.02em;
     line-height: 1.15;
     margin: 0.3rem 0 0.8rem;
+    animation: fadeUp 0.8s ease both;
 }
 
 h2 {
@@ -74,6 +75,11 @@ ul li {
 .logo {
     height: 60px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
 }
   
 .nav-links {
@@ -84,4 +90,24 @@ ul li {
 .nav-links a {
     color: #6b2b2b;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c0392b;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeUp 0.8s ease 0.2s both;
 }
